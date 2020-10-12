@@ -51,19 +51,17 @@ namespace forces
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            double angle = double.Parse(textBox1.Text);
-            double answer = sin(angle);
-            label1.Text = "answer =" + answer;
-        }
-
-        private void TextBox2_TextChanged(object sender, EventArgs e)
-        {
             double Force = double.Parse(textBox1.Text);
             double Angle = double.Parse(textBox2.Text);
             double Fx = Force * cos(Angle);
             double Fy = Force * sin(Angle);
             label1.Text = "Fx = " + Fx;
             label2.Text = "Fy = " + Fy;
+        }
+
+        private void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
