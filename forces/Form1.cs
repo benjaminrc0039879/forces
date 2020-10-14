@@ -51,18 +51,23 @@ namespace forces
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            //use try to test cade works
             try
             {
+                //read text from textbox
                 double Force = double.Parse(textBox1.Text);
                 double Angle = double.Parse(textBox2.Text);
+                //calculate forces Fx and Fy
                 double Fx = Force * cos(Angle);
                 double Fy = Force * sin(Angle);
+                //output answers to labels
                 label1.Text = "Fx = " + Fx;
                 label2.Text = "Fy = " + Fy;
             }
-
+            //use catch to output error message
             catch
             {
+                //message box to show something went wrong
                 MessageBox.Show("ERROR ERROR ERROR");
             }
         }
